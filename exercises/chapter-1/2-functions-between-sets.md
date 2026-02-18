@@ -18,9 +18,9 @@ each member of the family [§2.5, V.3.3]
   the image of f. therefore f is surjective.
 
 (<==)
-  if f is surjective, then ∀ b ∈ B, the inverse f* b is nonempty.
+  if f is surjective, then ∀ b ∈ B, the inverse f^-1 b is nonempty.
   so to construct the right inverse g : B -> A, we can let g(b) be defined
-  as the chosen element of f*(b) by the axiom of choice. 
+  as the chosen element of f^-1(b) by the axiom of choice. 
   then, ∀ b ∈ B, f g b = b
 
 
@@ -28,6 +28,17 @@ each member of the family [§2.5, V.3.3]
 2.3. Prove that the inverse of a bijection is a bijection and that the
 composition of two bijections is a bijection.  
 
+part 1: if f:A->B is a bijective function, then every fiber f^-1({b}) is a
+singleton, so f^-1 is a well defined function B->A. taking the inverse of
+a function is involutive, so f^-1^-1({a}) = f({a}), so every fiber of f^-1
+is a singleton since f is a function.
+
+part 2: if f:A->B and g:B->C are bijective functions, then
+  ∀ c ∈ C:
+  (g o f)^-1({c}) = f^-1(g^-1({c}))
+  g^-1({c}) is the singleton {b} since g is bijective.
+  f^-1({b}) is the singleton {a} since f is bijective.
+  therefore every fiber of (g o f)^-1 is a singleton.
 
 
 --------------------------------------------------------------------------------
